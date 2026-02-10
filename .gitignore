@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+uv.lock
+
+# Private info
+data/
+reports/
+logs/
+.env
+SISTEMA.md
+*.excalidraw
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
