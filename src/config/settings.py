@@ -3,6 +3,7 @@ Módulo que contiene la configuración del sistema.
 """
 
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -10,9 +11,12 @@ load_dotenv()
 
 
 class Settings:
-    BASE_URL = os.getenv("BOOKING_BASE_URL")
+    DATA_DIR = Path(__file__).parent.parent.parent / "data"
     USER_AGENT = os.getenv("USER_AGENT")
-    TIMEOUT = 10
-    MAX_RETRIES = 3
-    BACKOFF_FACTOR = 2
+    TIMEOUT = 20
+    MAX_RETRIES = 5
+    BACKOFF_FACTOR = 4
     BATCH_SIZE = 20
+
+
+settings = Settings()
