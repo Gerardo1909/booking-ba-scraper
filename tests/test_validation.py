@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import pytest
 from pytest_check import check
 
-from main import validate_date, validate_dates
+from utils.input_validators import validate_date, validate_dates
 
 
 class TestValidateDate:
