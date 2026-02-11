@@ -100,7 +100,7 @@ class BookingScraper:
             Browser configurado y listo para usar.
         """
         scraping_logger.debug("Iniciando browser en modo headless")
-        return playwright.chromium.launch(headless=False)
+        return playwright.chromium.launch(headless=True)
 
     def _create_context(self) -> BrowserContext:
         """
