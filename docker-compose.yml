@@ -1,0 +1,14 @@
+services:
+    booking-scraper:
+        build:
+            context: .
+            target: production
+        container_name: booking_interactive_scraper
+        volumes:
+            - ./data:/app/data
+            - ./logs:/app/logs
+        stdin_open: true
+        tty: true
+        environment:
+            USER_AGENT: $(USER_AGENT)
+            PYTHONUNBUFFERED: 1
